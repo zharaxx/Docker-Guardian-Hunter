@@ -15,7 +15,7 @@ Containerize Python Game - Guardian and Hunter
 | Rafi Ramadhan Pratama       | 120140079 | RB | zharaxx         |
 | Arum Rahmawati              | 120140085 | RB | arumrhm         |
 
-**Deskrips Program** :
+**Deskripsi Program** :
 
 **Treasure Hunter** sebuah game yang terinspirasi dari pacman, namun kami buat seperti seorang hunter yang mencari koin sebanyak - banyaknya dan ketika mencari koin, setiap area dijaga oleh guardian dan terdapat power up untuk membantu hunter melewati sang guardian tersebut
 
