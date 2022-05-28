@@ -1,53 +1,29 @@
-FROM ubuntu:20.04
-ENV DEBIAN_FRONTEND=noninteractive
+# For more information, please refer to https://aka.ms/vscode-docker-python
+FROM ubuntu:latest
 
-# install semua dependensi paket (library) yang dibutuhkan
-RUN apt-get update && apt-get upgrade -y && apt-get install -y \
-    tzdata \
-    libssl-dev \
-    openssl \
-    zlib1g-dev \
-    build-essential \
-    checkinstall \
-    libffi-dev \
-    libsqlite3-dev \
-    vim \
-    curl \
-    make \
-    sudo \
-    python3-pip \
-    python3-pygame \
-    libsdl1.2-dev \
-    libsdl-image1.2-dev \
-    libsdl-mixer1.2-dev \
-    libsdl-sound1.2-dev \
-    libsdl-ttf2.0-dev \
-    libsdl2-dev \
-    libsdl2-image-dev \
-    libsdl2-mixer-dev \
-    libsdl2-ttf-dev \
-    libsdl2-gfx-dev \
-    libsdl2-net-dev
+# Keeps Python from generating .pyc files in the container
+ENV PYTHONDONTWRITEBYTECODE=1
 
-# install x11
-RUN apt install -qqy x11-apps
+# Turns off buffering for easier container logging
+ENV PYTHONUNBUFFERED=1
 
-# install pygame
-RUN pip3 install pygame
+# Install pip requirements
+COPY requirements.txt .
+COPY Assets .
+RUN apt update
+RUN ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
+RUN DEBIAN_FRONTEND=noninteractive apt install -y tzdata
+RUN apt install -y libsdl2-2.0-0 python3-pip python3-tk
+RUN pip3 install -r requirements.txt
 
-# install tkinter
-RUN apt-get install -y python3-tk 
+ENV DISPLAY=host.docker.internal:0.0
 
-# menambahkan parameter build argument
-ARG USER=docker
-ARG UID=1000
-ARG GID=1000
+WORKDIR /app
+COPY . /app
 
-# menambahkan default password untuk user
-ARG PW=docker
-RUN useradd -m ${USER} --uid=${UID} --shell /bin/bash && echo "${USER}:${PW}" | chpasswd \
-    && adduser docker sudo
-
-# Setup default user, ketika memasuki kontainer
-USER ${UID}:${GID}
-WORKDIR /home/${USER}
+# Creates a non-root user with an explicit UID and adds permission to access the /app folder
+# For more info, please refer to https://aka.ms/vscode-docker-python-configure-containers
+RUN adduser -u 5678 --disabled-password --gecos "" appuser && chown -R appuser /app
+USER appuser
+# During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
+CMD ["python3", "Main.py"]
