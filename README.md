@@ -23,21 +23,14 @@ Containerize Python Game - Guardian and Hunter
 
 **Panduan** :
 
-1. Sebelum menjalankan permainan kami membuatnya menggunakan python, dan menggunakan linux untuk menjalankannya
-2. Kami meng-clone/memasukkan file repository kami ke dalam file penyimpanan di linux.
-3. Selanjutnya kami menjalankan perintah
+1. Sebelum menjalankan permainan kami membuatnya menggunakan python, dan menginstall docker desktop untuk menjalankannya
+2. Pertama jalankan dockerfile lewat vscode
+3. Kami menjalankan dockerfile yang didalamnya sudah terdapat consfigurasi untuk membuild/membuat image.
+5. Jalankan convig.launch, gunakan aplikasi X launch
+4. Selanjutnya kami menjalankan perintah mengeksekusi docker, dengan membuka cmd
     ``` bash
-    cd Downloads
+    docker run tugasbesarpborbpedanghitamgacor
     ```
-    setelah itu kami membuild kodingan kami dengan perintah
-    ``` bash
-    make build hunter-guardian
-    ```
-    selanjutnya kami menjalankannya
-    ``` bash
-    make run-linux
-    ```
-    dan terakhir kita merunning programnya untuk dikeluarkan
-    ``` bash
-    python3 -m main
-    ```
+## videodemokontainer
+
+[![LIHAT VIDEO DISINI](https://user-images.githubusercontent.com/94521429/170832332-e6a37f02-b9ff-408a-bad5-58c0600487b4.png)](Link yt lorang)
