@@ -1,6 +1,7 @@
 # Docker-Guardian-Hunter
  
 Containerize Python Game - Guardian and Hunter
+![Img 1](Judul.png)
 ======================================
 
 ## Nama dan NIM Anggota Kelompok
