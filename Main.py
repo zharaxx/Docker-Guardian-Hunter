@@ -1,6 +1,5 @@
 from re import X
 from tkinter import Menu
-from turtle import speed, width
 import pygame,sys
 import random
 from pygame import mixer

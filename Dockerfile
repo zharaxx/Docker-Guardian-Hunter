@@ -35,6 +35,9 @@ RUN apt install -qqy x11-apps
 # install pygame
 RUN pip3 install pygame
 
+# install tkinter
+RUN apt-get install -y python3-tk 
+
 # menambahkan parameter build argument
 ARG USER=docker
 ARG UID=1000
