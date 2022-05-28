@@ -4,14 +4,14 @@ Containerize Python Game - Guardian and Hunter
 ======================================
 
 ## Nama dan NIM Anggota Kelompok
-| Nama | NIM | Akun Git |
-| :---: | :---: | :---: |
-| Astari Kinanti Rei          | 120140013 | aareii          |
-| Rangga Ndaru Anggoro        | 120140019 | randaru9        |
-| Najib Wiharjanto            | 120140029 | NajibWiharjanto |
-| Dinda Sela Listiana         | 120140078 | DindaSela       |
-| Rafi Ramadhan Pratama       | 120140079 | zharaxx         |
-| Arum Rahmawati              | 120140085 | arumrhm         |
+| Nama | NIM | Kelas | Akun Git |
+| :---: | :---: | :---: | :---: |
+| Astari Kinanti Rei          | 120140013 | RB | aareii          |
+| Rangga Ndaru Anggoro        | 120140019 | RB | randaru9        |
+| Najib Wiharjanto            | 120140029 | RB | NajibWiharjanto |
+| Dinda Sela Listiana         | 120140078 | RB | DindaSela       |
+| Rafi Ramadhan Pratama       | 120140079 | RB | zharaxx         |
+| Arum Rahmawati              | 120140085 | RB | arumrhm         |
 
 **Deskrips Program** :
 
