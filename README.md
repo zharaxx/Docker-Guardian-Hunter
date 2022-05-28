@@ -1,8 +1,9 @@
 # Docker-Guardian-Hunter
- 
+![Img 1](dockerr.png)
+========================================
 Containerize Python Game - Guardian and Hunter
 ![Img 1](Judul.png)
-======================================
+========================================
 
 ## Nama dan NIM Anggota Kelompok
 | Nama | NIM | Kelas | Akun Git |
